@@ -18,4 +18,8 @@ public class FlowerService {
         return flowerRepository.findAll();
         // return List.of(new Flower(FlowerColor.RED, 45, 0.8));
     }
+
+    public void addFlower(Flower flower) {
+        flowerRepository.save(flower);
+    }
 }

@@ -6,4 +6,7 @@ public class FlowerRepository {
     public List<Flower> findAll() {
         return null;
     }
+
+    public void save(Flower flower) {
+    }
 }
