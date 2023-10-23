@@ -12,20 +12,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/flowers/")
 public class FlowerController {
-    public final FlowerService flowerService;
 
-    @Autowired
-    public FlowerController(FlowerService flowerService) {
-        this.flowerService = flowerService;
-    }
-
-    @GetMapping("list")
+    @GetMapping("7")
     public List<Flower> getFlowers() {
-        return flowerService.getFlowers();
+        return List.of(new Flower(FlowerColor.RED, 13, 0.6));
     }
 
-    @PostMapping("add")
-    public void addFlower(@RequestBody Flower flower) {
-        flowerService.addFlower(flower);
-    }
+    // public final FlowerService flowerService;
+
+    // @Autowired
+    // public FlowerController(FlowerService flowerService) {
+    // this.flowerService = flowerService;
+    // }
+
+    // @PostMapping("add")
+    // public void addFlower(@RequestBody Flower flower) {
+    // flowerService.addFlower(flower);
 }
